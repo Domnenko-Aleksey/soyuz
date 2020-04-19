@@ -1,0 +1,41 @@
+ЗАПУСК ВИРТУАЛЬНОГО ОКРУЖЕНИЯ
+	C:\github\soyuz\env\Scripts\activate.bat
+
+
+СОЗДАНИЕ ПРОЕКТА
+	Из командной строки cd перейдите в каталог, в котором вы хотите сохранить свой код, а затем выполните следующую команду:
+	$ django-admin startproject mysite
+	Это создаст mysite каталог в вашем текущем каталоге
+
+	
+ЗАПУСК DJANGO
+	C:\github\soyuz\dan python manage.py runserver
+
+	
+СОЗДАНИЕ ПРИЛОЖЕНИЯ 
+	C:\github\soyuz\dan python manage.py startapp core (создаётся папка core)
+
+	
+УКАЗАТЬ НАШЕ ПРИЛОЖЕНИЕ в settings.py
+	INSTALLED_APPS = [
+		...
+		'core',
+	]
+
+
+РЕДАКТИРУЕМ ВЪЮХУ
+	В папке приложения в views.py создаём функцию
+	def index(request):
+		return HttpResponse('ok')
+	Добавляем в роут нашу въюху в urls.py (корневая папка)
+	urlpatterns = [
+		path('', index),
+		path('admin/', admin.site.urls),
+	]
+
+
+СОЗДАНИЕ НЕОБХОДИМЫХ БАЗ ДАННЫХ
+	$ python manage.py migrate
+	Команда migrateпросматривает INSTALLED_APPS настройки и создает все необходимые таблицы базы данных 
+	в соответствии с настройками базы данных в вашем mysite/settings.py файле и 
+	миграциями базы данных, поставляемыми с приложением
