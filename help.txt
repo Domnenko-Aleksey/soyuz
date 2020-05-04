@@ -7,7 +7,15 @@
 	$ django-admin startproject mysite
 	Это создаст mysite каталог в вашем текущем каталоге
 
-	
+
+СОЗДАНИЕ ЗАВИСИМОСТЕЙ
+	Создаём файл requirements.txt внутри нашего проекта. 
+	Прописываем версию django: 
+	django==3.0.5
+	Устанавливаем зависимости:
+	pip install -r requirements.txt
+
+
 ЗАПУСК DJANGO
 	C:\github\soyuz\dan python manage.py runserver
 

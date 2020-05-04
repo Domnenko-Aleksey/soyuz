@@ -1,5 +1,8 @@
+{% load static %}
+<!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="{% static 'template/css/style.css' %}" />
 <title>Тестовая веб-сайт страница</title>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
@@ -481,7 +484,8 @@ footer {
                             </tbody>
                         </table>
                     </div>
-                </div>               
+                </div>
+				<div><img alt="Django" src="{% static 'media/django.jpeg' %}"></div>				
             </div>
 			<div class="wave-gray"></div>
 	   </div>
